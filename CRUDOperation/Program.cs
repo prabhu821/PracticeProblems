@@ -38,6 +38,42 @@ namespace CRUDOperation
             {
                 Console.WriteLine(item);
             }
+
+            Console.WriteLine("/*****************************************************************************/");
+            Console.WriteLine("/*****************************************************************************/");
+
+
+            Dictionary<int, string> myDictionary = new Dictionary<int, string>();
+
+            // Create - Adding key-value pairs to the Dictionary
+            myDictionary.Add(1, "Apple");
+            myDictionary.Add(2, "Banana");
+            myDictionary.Add(3, "Cherry");
+
+            // Read - Accessing values from the Dictionary using keys
+            Console.WriteLine("Dictionary values:");
+            foreach (var kvp in myDictionary)
+            {
+                Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}");
+            }
+
+            // Update - Modifying values in the Dictionary
+            myDictionary[2] = "Mango";
+
+            Console.WriteLine("\nUpdated Dictionary values:");
+            foreach (var kvp in myDictionary)
+            {
+                Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}");
+            }
+
+            // Delete - Removing key-value pairs from the Dictionary
+            myDictionary.Remove(3);
+
+            Console.WriteLine("\nDictionary values after removing a key-value pair:");
+            foreach (var kvp in myDictionary)
+            {
+                Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}");
+            }
         }
     }
 }
